@@ -3,9 +3,12 @@ const DEFAULTS = {
 }
 
 export const ALL_TEAMS = {
-  methond: 'teams',
+  method: 'allTeams',
   endpoint: '/teams',
-  defaults: {
+}
 
-  }
+export const TEAM = {
+  method: 'team',
+  parameter: 'TEAM_ID',
+  endpoint: '/teams/${TEAM_ID}'
 }

@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel src -d lib",
+    "watch-build": "npm run build -- -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
