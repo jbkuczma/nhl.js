@@ -1,3 +1,3 @@
-import team from './team'
+import teams from './teams'
 
-export default { team };
+export default { teams };

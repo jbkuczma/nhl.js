@@ -1,5 +1,5 @@
 import endpoints from './api'
-const { team } = endpoints
+const { teams } = endpoints
 
-export { team }
+export { teams }
 export default endpoints

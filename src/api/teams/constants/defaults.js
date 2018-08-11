@@ -10,5 +10,5 @@ export const ALL_TEAMS = {
 export const TEAM = {
   method: 'team',
   parameter: 'TEAM_ID',
-  endpoint: '/teams/${TEAM_ID}'
+  endpoint: '/teams'
 }
