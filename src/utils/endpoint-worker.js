@@ -7,7 +7,6 @@ import nhlFetch from './fetch'
  * @return {Promise}
  */
 export const work = (endpoint, parameter) => {
-  console.log(endpoint)
 
   if (parameter !== undefined) {
     endpoint = `${endpoint}/${parameter}`

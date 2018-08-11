@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel src -d lib",
     "watch-build": "npm run build -- -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha js:babel-core/register --colors tests/*"
   },
   "keywords": [
     "NHL",
@@ -16,7 +16,8 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "mocha": "^5.2.0"
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1"
