@@ -12,3 +12,12 @@ export const TEAM = {
   parameter: 'TEAM_ID',
   endpoint: '/teams'
 }
+
+export const TEAM_ROSTER = {
+  expand: [
+    'team.roster'
+  ],
+  method: 'roster',
+  parameter: 'TEAM_ID',
+  endpoint: '/teams'
+}

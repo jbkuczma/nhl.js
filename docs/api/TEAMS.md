@@ -6,6 +6,10 @@
   * Parameters:
     * NONE
 
+* `roster`
+  * Parameters:
+    * `teamID`
+
 * `team`
   * Parameters:
     * `teamID`
