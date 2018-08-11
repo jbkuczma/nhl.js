@@ -4,6 +4,7 @@
   "description": "Interact with the NHL api",
   "main": "index.js",
   "scripts": {
+    "build": "babel src -d lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -11,5 +12,12 @@
     "hockey"
   ],
   "author": "James Kuczmarski",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1"
+  }
 }
