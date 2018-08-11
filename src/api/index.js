@@ -1,3 +1,4 @@
 import teams from './teams'
+import players from './players'
 
-export default { teams };
+export default { teams, players };
