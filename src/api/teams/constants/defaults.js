@@ -21,3 +21,12 @@ export const TEAM_ROSTER = {
   parameter: 'TEAM_ID',
   endpoint: '/teams'
 }
+
+export const TEAM_STATS = {
+  expand: [
+    'team.stats'
+  ],
+  method: 'stats',
+  parameter: 'TEAM_ID',
+  endpoint: '/teams'
+}

@@ -10,6 +10,10 @@
   * Parameters:
     * `teamID`
 
+* `stats`
+  * Parameters:
+    * `teamID`
+
 * `team`
   * Parameters:
     * `teamID`

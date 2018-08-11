@@ -39,4 +39,16 @@ describe('nhl.teams', () => {
       .catch(error => done(error))
     })
   })
+  describe('stats()', () => {
+    it('response should contain a teamStats property', done => {
+      nhl.teams.stats(BUFFALO_SABRES_TEAM_ID).then(data => {
+        if (data.teams.length === 1 && data.teams[0].hasOwnProperty('teamStats')) {
+          done()
+        } else {
+          throw new Error('TeamStats was not found')
+        }
+      })
+      .catch(error => done(error))
+    })
+  })
 })
