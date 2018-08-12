@@ -50,3 +50,5 @@ export const STANDINGS = {
   method: 'standings',
   endpoint: '/standings'
 }
+
+// TODO: standings on a given date provided ?date=10-10-2017

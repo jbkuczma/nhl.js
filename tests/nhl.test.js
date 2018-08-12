@@ -2,7 +2,7 @@
 
 const nhl = require('../lib')
 const should = require('should')
-const SUBMODULES = ['teams', 'players', 'league']
+const SUBMODULES = ['teams', 'players', 'league', 'games']
 
 describe('index', () => {
   it('should export `teams`, `players`, `league` submodules', done => {

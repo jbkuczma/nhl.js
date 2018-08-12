@@ -1,5 +1,5 @@
 import endpoints from './api'
-const { teams, players, league } = endpoints
+const { teams, players, league, games } = endpoints
 
-export { teams, players, league }
+export { teams, players, league, games }
 export default endpoints
