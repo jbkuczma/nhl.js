@@ -13,13 +13,17 @@ export const TEAM = {
   endpoint: '/teams'
 }
 
+// https://statsapi.web.nhl.com/api/v1/teams/7/roster instead (?)
 export const TEAM_ROSTER = {
-  expand: [
-    'team.roster'
-  ],
+  // expand: [
+  //   'team.roster'
+  // ],
+  // method: 'roster',
+  // parameter: 'TEAM_ID',
+  // endpoint: '/teams'
   method: 'roster',
-  parameter: 'TEAM_ID',
-  endpoint: '/teams'
+  parameter: 'teamID',
+  endpoint: `/teams/{{teamID}}/roster`
 }
 
 export const TEAM_STATS = {
