@@ -9,7 +9,7 @@
   const nhl = require('nhl.js')
   const BUFFALO_SABRES_TEAM_ID = 7
 
-  nhl.teams.team(BUFFALO_SABRES_TEAM_ID).then(data => {
+  nhl.teams.team({ teamID: BUFFALO_SABRES_TEAM_ID }).then(data => {
     const sabres = data.teams[0]
     console.log(sabres)
   })

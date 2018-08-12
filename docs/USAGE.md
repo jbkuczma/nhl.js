@@ -9,7 +9,7 @@ const nhl = require('nhl.js')
 
 * All API methods will return a promise
 ```js
-nhl.players.player(PLAYER_ID).then(data => {
+nhl.players.player({ playerID: PLAYER_ID }).then(data => {
   console.log(data)
 })
 ```
@@ -17,7 +17,7 @@ nhl.players.player(PLAYER_ID).then(data => {
 * ES7 async/await can also be used
 ```js
 async function() {
-  const data = await nhl.players.player(PLAYER_ID)
+  const data = await nhl.players.player({ playerID: PLAYER_ID })
   console.log(data)
 }
 ```
