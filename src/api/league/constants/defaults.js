@@ -40,3 +40,13 @@ export const PROSPECT = {
   parameter: 'PROSPECT_ID',
   endpoint: '/draft/prospects',
 }
+
+export const STANDINGS = {
+  expand: [
+    'standings.record',
+    'standings.division',
+    'standings.conference'
+  ],
+  method: 'standings',
+  endpoint: '/standings'
+}
