@@ -3,5 +3,8 @@ import { work } from '../../utils/endpoint-worker'
 
 Object.keys(DEFAULTS).forEach(key => {
   let obj = DEFAULTS[key]
-  exports[obj.method] = (params) => work(obj.endpoint, params)
+
+  let expanded = obj.expand === undefined ? [] : obj.expand
+
+    exports[obj.method] = (params) => work(obj, params, expanded)
 })
