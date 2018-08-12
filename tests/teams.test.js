@@ -28,9 +28,9 @@ describe('nhl.teams', () => {
     })
   })
   describe('roster()', () => {
-    it('response should contain a roster property', done => {
+    it('response should return roster of the team', done => {
       nhl.teams.roster(BUFFALO_SABRES_TEAM_ID).then(data => {
-        if (data.teams.length === 1 && data.teams[0].hasOwnProperty('roster')) {
+        if (data.hasOwnProperty('roster')) {
           done()
         } else {
           throw new Error('Roster was not found')
