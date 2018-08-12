@@ -27,10 +27,13 @@ export const TEAM_ROSTER = {
 }
 
 export const TEAM_STATS = {
-  expand: [
-    'team.stats'
-  ],
+  // expand: [
+  //   'team.stats'
+  // ],
+  // method: 'stats',
+  // parameter: 'TEAM_ID',
+  // endpoint: '/teams'
   method: 'stats',
-  parameter: 'TEAM_ID',
-  endpoint: '/teams'
+  parameter: 'teamID',
+  endpoint: '/teams/{{teamID}}/stats'
 }

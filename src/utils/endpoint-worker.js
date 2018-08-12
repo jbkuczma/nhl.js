@@ -29,8 +29,8 @@ export const work = (o, parameter, expand) => {
     endpoint = insertParameter(o, parameter)
   }
 
-  // usually the parameters is the last part of the endpoint url
-  if (parameter !== undefined) {
+  // if we don't need to insert the provided parameter in the middle of the endpoint, we add it to the end
+  if (parameter !== undefined && !shouldInsertParameter) {
     endpoint = `${endpoint}/${parameter}`
   }
 
