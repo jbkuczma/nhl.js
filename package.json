@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel src -d lib",
     "watch-build": "npm run build -- -w",
-    "test": "mocha js:babel-core/register --colors tests/*"
+    "test": "mocha js:babel-core/register --colors tests/*",
+    "prettier": "/node_modules/prettier/bin-prettier.js --write src/**/*.js"
   },
   "keywords": [
     "NHL",
