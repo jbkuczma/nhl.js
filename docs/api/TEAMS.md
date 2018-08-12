@@ -6,6 +6,14 @@
   * Parameters:
     * NONE
 
+* `nextGame`
+  * Parameters:
+    * `teamID`
+
+* `previousGame`
+  * Parameters:
+    * `teamID`
+
 * `roster`
   * Parameters:
     * `teamID`

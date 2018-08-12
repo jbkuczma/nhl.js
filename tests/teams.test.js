@@ -51,4 +51,28 @@ describe('nhl.teams', () => {
       .catch(error => done(error))
     })
   })
+  describe('previousGame()', () => {
+    it('should return the previous game for a team', done => {
+      nhl.teams.previousGame(BUFFALO_SABRES_TEAM_ID).then(data => {
+        if (data.teams[0].hasOwnProperty('previousGameSchedule')) {
+          done()
+        } else {
+          throw new Error('Previous game not found')
+        }
+      })
+      .catch(error => done(error))
+    })
+  })
+  describe('nextGame()', () => {
+    it('should return the next game for a team', done => {
+      nhl.teams.nextGame(BUFFALO_SABRES_TEAM_ID).then(data => {
+        if (data.teams[0].hasOwnProperty('nextGameSchedule')) {
+          done()
+        } else {
+          throw new Error('Next game not found')
+        }
+      })
+      .catch(error => done(error))
+    })
+  })
 })

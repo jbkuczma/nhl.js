@@ -7,6 +7,24 @@ export const ALL_TEAMS = {
   endpoint: '/teams',
 }
 
+export const NEXT_GAME = {
+  expand: [
+    'team.schedule.next'
+  ],
+  method: 'nextGame',
+  parameter: 'teamID',
+  endpoint: '/teams/{{teamID}}'
+}
+
+export const PREVIOUS_GAME = {
+  expand: [
+    'team.schedule.previous'
+  ],
+  method: 'previousGame',
+  parameter: 'teamID',
+  endpoint: '/teams/{{teamID}}'
+}
+
 export const TEAM = {
   method: 'team',
   parameter: 'TEAM_ID',
