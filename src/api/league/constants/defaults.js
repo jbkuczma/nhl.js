@@ -19,8 +19,8 @@ export const ALL_PROSPECTS = {
 
 export const CONFERENCE = {
   method: 'conference',
-  parameter: 'CONFERENCE_ID',
-  endpoint: '/conferences',
+  parameter: 'conferenceID',
+  endpoint: '/conferences/{{conferenceID}}',
 }
 
 export const DIVISION = {
