@@ -30,6 +30,10 @@
   * Parameters:
     * `prospectID`
 
+* `standings`
+  * Parameters:
+    * NONE
+
 ### Parameter Reference
 
   * `conferenceID`
