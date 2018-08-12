@@ -25,20 +25,20 @@ export const CONFERENCE = {
 
 export const DIVISION = {
   method: 'division',
-  parameter: 'DIVISION_ID',
-  endpoint: '/divisions',
+  parameter: 'divisionID',
+  endpoint: '/divisions/{{divisionID}}',
 }
 
 export const DRAFT = {
   method: 'draft',
-  parameter: 'DRAFT_YEAR',
-  endpoint: '/draft',
+  parameter: 'draftYear',
+  endpoint: '/draft/{{draftYear}}',
 }
 
 export const PROSPECT = {
   method: 'prospect',
-  parameter: 'PROSPECT_ID',
-  endpoint: '/draft/prospects',
+  parameter: 'prospectID',
+  endpoint: '/draft/prospects/prospectID',
 }
 
 export const STANDINGS = {

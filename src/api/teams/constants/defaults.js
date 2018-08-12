@@ -27,8 +27,8 @@ export const PREVIOUS_GAME = {
 
 export const TEAM = {
   method: 'team',
-  parameter: 'TEAM_ID',
-  endpoint: '/teams'
+  parameter: 'teamID',
+  endpoint: '/teams/{{teamID}}'
 }
 
 // https://statsapi.web.nhl.com/api/v1/teams/7/roster instead (?)

@@ -6,37 +6,39 @@ const PARAMETER_REGEX = /\{\{\w+\}\}/
 /**
  *
  * @param {Object} o
- * @param {*} parameters
+ * @param {Object} parameters
  */
-const insertParameter = (o, parameter) => {
+const insertParameter = (o, parameters) => {
   let endpoint = o.endpoint
-  const parameterToInsert = o.parameter
-  return endpoint.split(`{{${parameterToInsert}}}`).join(parameter)
+
+  Object.keys(parameters).forEach(key => {
+    endpoint = endpoint.split(`{{${key}}}`).join(parameters[key])
+  })
+
+  if(o.hasOwnProperty('expand')) {
+    const expand = o.expand
+    endpoint = `${endpoint}?expand=${expand.join(',')}`
+  }
+
+  return endpoint
 }
 
 /**
  * Make request and return a promise
  * @param {Object} o
- * @param {String} parameter
+ * @param {Object} parameter
  * @return {Promise}
  */
-// export const work = (endpoint, parameter, expand) => {
-export const work = (o, parameter, expand) => {
+export const work = (o, parameters) => {
+  if (parameters !== undefined && typeof parameters !== 'object') {
+    throw new Error('Object was not passed')
+  }
+
   let endpoint = o.endpoint
   const shouldInsertParameter = PARAMETER_REGEX.test(endpoint);
 
   if (shouldInsertParameter) {
-    endpoint = insertParameter(o, parameter)
-  }
-
-  // if we don't need to insert the provided parameter in the middle of the endpoint, we add it to the end
-  if (parameter !== undefined && !shouldInsertParameter) {
-    endpoint = `${endpoint}/${parameter}`
-  }
-
-  if (expand !== undefined) {
-    const expanded = expand.join(',')
-    endpoint = `${endpoint}?expand=${expanded}`
+    endpoint = insertParameter(o, parameters)
   }
 
   return new Promise((resolve, reject) => {

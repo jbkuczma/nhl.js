@@ -17,7 +17,7 @@ describe('nhl.teams', () => {
   })
   describe('team()', () => {
     it('should return the Buffalo Sabres', done => {
-      nhl.teams.team(BUFFALO_SABRES_TEAM_ID).then(data => {
+      nhl.teams.team({ teamID: BUFFALO_SABRES_TEAM_ID }).then(data => {
         if (data.teams.length === 1 && data.teams[0].name === 'Buffalo Sabres') {
           done()
         } else {
@@ -29,7 +29,7 @@ describe('nhl.teams', () => {
   })
   describe('roster()', () => {
     it('response should return roster of the team', done => {
-      nhl.teams.roster(BUFFALO_SABRES_TEAM_ID).then(data => {
+      nhl.teams.roster({ teamID: BUFFALO_SABRES_TEAM_ID }).then(data => {
         if (data.hasOwnProperty('roster')) {
           done()
         } else {
@@ -41,7 +41,7 @@ describe('nhl.teams', () => {
   })
   describe('stats()', () => {
     it('response should return team stats', done => {
-      nhl.teams.stats(BUFFALO_SABRES_TEAM_ID).then(data => {
+      nhl.teams.stats({ teamID: BUFFALO_SABRES_TEAM_ID }).then(data => {
         if (data.hasOwnProperty('stats')) {
           done()
         } else {
@@ -53,7 +53,7 @@ describe('nhl.teams', () => {
   })
   describe('previousGame()', () => {
     it('should return the previous game for a team', done => {
-      nhl.teams.previousGame(BUFFALO_SABRES_TEAM_ID).then(data => {
+      nhl.teams.previousGame({ teamID: BUFFALO_SABRES_TEAM_ID }).then(data => {
         if (data.teams[0].hasOwnProperty('previousGameSchedule')) {
           done()
         } else {
@@ -65,7 +65,7 @@ describe('nhl.teams', () => {
   })
   describe('nextGame()', () => {
     it('should return the next game for a team', done => {
-      nhl.teams.nextGame(BUFFALO_SABRES_TEAM_ID).then(data => {
+      nhl.teams.nextGame({ teamID: BUFFALO_SABRES_TEAM_ID }).then(data => {
         if (data.teams[0].hasOwnProperty('nextGameSchedule')) {
           done()
         } else {
