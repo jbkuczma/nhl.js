@@ -1,4 +1,4 @@
 bracketSpacing: true
-semi: false
+semi: true
 singleQuote: true
 tabWidth: 2
