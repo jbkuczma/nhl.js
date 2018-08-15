@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/jbkuczma/nhl.js.svg?branch=master)](https://travis-ci.org/jbkuczma/nhl.js)
 [![npm version](https://badge.fury.io/js/nhl.js.svg)](https://badge.fury.io/js/nhl.js)
 [![Dependency Status](https://img.shields.io/david/jbkuczma/nhl.js.svg)](https://david-dm.org/jbkuczma/nhl.js)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
