@@ -22,12 +22,19 @@ const constructEndpoint = (constants, parameters) => {
     endpoint = endpoint.split(`{{${key}}}`).join(value);
   });
 
+  // remove any left over `{{paramter}}` instances
+  endpoint = endpoint.replace(/\{\{[a-zA-Z]*\}\}/g, '');
+
   if (
     constants.hasOwnProperty('expand') &&
     !parameters.hasOwnProperty('expand')
   ) {
     const expand = constants.expand;
-    endpoint = `${endpoint}?expand=${expand.join(',')}`;
+    if (endpoint.includes('?')) {
+      endpoint = `${endpoint}&expand=${expand.join(',')}`;
+    } else {
+      endpoint = `${endpoint}?expand=${expand.join(',')}`;
+    }
   }
 
   return endpoint;

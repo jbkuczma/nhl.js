@@ -23,3 +23,11 @@ export const GAME = {
   parameter: 'gameID',
   endpoint: '/game/{{gameID}}/feed/live'
 }
+
+export const GAMES = {
+  method: 'games',
+  expand: [
+    'schedule.linescore'
+  ],
+  endpoint: '/schedule?teamId={{teamID}}&date={{date}}&startDate={{startDate}}&endDate={{endDate}}'
+}
