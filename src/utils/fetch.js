@@ -11,7 +11,6 @@ const nhlFetch = endpoint => {
   const HEADERS = {
     'Accept-Encoding': 'gzip, deflate',
     'Accept-Language': 'en-US,en;q=0.9',
-    'Cache-Control': 'no-cache',
     Connection: 'keep-alive',
     Host: 'statsapi.web.nhl.com',
     'User-Agent':
