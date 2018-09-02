@@ -2,6 +2,10 @@
   "name": "nhl.js",
   "version": "0.2.1",
   "description": "Interact with the NHL api",
+  "homepage": "https://github.com/jbkuczma/nhl.js#readme",
+  "bugs": {
+    "url": "https://github.com/jbkuczma/nhl.js/issues"
+  },
   "main": "lib/index.js",
   "scripts": {
     "build": "babel src -d lib",
