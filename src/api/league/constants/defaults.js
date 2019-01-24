@@ -48,7 +48,8 @@ export const STANDINGS = {
     'standings.conference'
   ],
   method: 'standings',
-  endpoint: '/standings'
+  parameter: 'standingsType',
+  endpoint: '/standings/{{standingsType}}'
 }
 
 // TODO: standings on a given date provided ?date=10-10-2017
