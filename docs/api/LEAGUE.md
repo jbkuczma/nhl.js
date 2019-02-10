@@ -68,8 +68,13 @@
 
   * `standingsType`
     * Possible Values:
+      * regularSeason: `Regular Season Standings`
+      * wildCard: `Wild card standings`
+      * divisionLeaders: `Division Leader standings`
+      * wildCardWithLeaders: `Wild card standings with Division Leaders`
+      * preseason: `Preseason Standings`
+      * postseason: `Postseason Standings`
       * byDivision: `Standings by Division`
       * byConference: `Standings by Conference`
       * byLeague: `Standings by League`
-      * wildCardWithLeaders: `Wild card standings with Division Leaders`
         * Note: defaults to regularSeason
