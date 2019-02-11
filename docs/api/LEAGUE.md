@@ -32,7 +32,7 @@
 
 * `standings`
   * Parameters:
-    * NONE
+    * `standingsType`
 
 ### Parameter Reference
 
@@ -65,3 +65,16 @@
     * Possible Values:
       * Season format: `yyyyyyyy`
         * Example: `20172018`
+
+  * `standingsType`
+    * Possible Values:
+      * regularSeason: `Regular Season Standings`
+      * wildCard: `Wild card standings`
+      * divisionLeaders: `Division Leader standings`
+      * wildCardWithLeaders: `Wild card standings with Division Leaders`
+      * preseason: `Preseason Standings`
+      * postseason: `Postseason Standings`
+      * byDivision: `Standings by Division`
+      * byConference: `Standings by Conference`
+      * byLeague: `Standings by League`
+        * Note: defaults to regularSeason
