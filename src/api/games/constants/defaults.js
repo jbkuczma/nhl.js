@@ -33,5 +33,5 @@ export const GAMES = {
     'schedule.teams',
     'schedule.ticket',
   ],
-  endpoint: '/schedule?teamId={{teamID}}&date={{date}}&startDate={{startDate}}&endDate={{endDate}}'
+  endpoint: '/schedule?date={{date}}&startDate={{startDate}}&endDate={{endDate}}&gameType={{gameType}}'
 }
