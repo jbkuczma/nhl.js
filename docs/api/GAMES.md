@@ -16,10 +16,10 @@
 
 * `games`
   * Parameters:
-    * `teamID`
     * `date`
     * `startDate`
     * `endDate`
+    * `gameType`
 
 ### Parameter Reference
 
@@ -34,3 +34,10 @@
   * `startDate`
     * Possible Values:
       * Date format: `yyyy-mm-dd`
+
+  * `gameType`
+    * Possible Values:
+      * Preseason: `PR`
+      * Regular season: `R`
+      * Postseason: `P`
+        * Note: defaults to current season
