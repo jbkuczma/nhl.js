@@ -27,7 +27,11 @@ export const GAME = {
 export const GAMES = {
   method: 'games',
   expand: [
-    'schedule.linescore'
+    'schedule.broadcasts',
+    'schedule.game.content.media.epg',
+    'schedule.linescore',
+    'schedule.teams',
+    'schedule.ticket',
   ],
   endpoint: '/schedule?teamId={{teamID}}&date={{date}}&startDate={{startDate}}&endDate={{endDate}}'
 }
